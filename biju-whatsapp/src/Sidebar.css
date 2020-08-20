@@ -1,0 +1,61 @@
+.sidebar {
+  flex: 0.3 !important;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-right: 1px solid lightgray;
+}
+.sidebar__header--left {
+  display: flex;
+  align-items: center;
+  /* flex: 1; */
+}
+.sidebar__header--left > span > h3 {
+  margin-left: 10px;
+}
+.sidebar__header--right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10vw;
+}
+.sidebar__header--right > .MuiSvgIcon-root {
+  margin-right: 2vw;
+  font-size: 24px !important;
+}
+.sidebar__search {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 39px;
+  padding: 10px;
+}
+.sidebar__search--container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.sidebar__search--container > input {
+  border: none;
+  margin-left: 10px;
+}
+.sidebar__search--container > .MuiSvgIcon-root {
+  color: gray;
+  padding: 10px;
+}
+.sidebar__chats {
+  /* as we are using the flex-direction columns in the sidebar the main container and these flex: 1; is moving towards the colums and taking the full remaining height of the sidebar */
+  flex: 1;
+
+  /* and making the sidebar as the flex-direction as the column and adding the stuff init and the  remaining will be flex-1 and making the flex-1 to be the scrollable which is insane */
+  background-color: white;
+  overflow-y: scroll;
+}
+.sidebar__chats::-webkit-scrollbar {
+  display: none;
+}
